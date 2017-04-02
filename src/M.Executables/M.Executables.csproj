@@ -13,7 +13,7 @@
     <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
     <RepositoryUrl>https://github.com/petar-m/executables</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/petar-m/executables/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl></PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/petar-m/executables</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
