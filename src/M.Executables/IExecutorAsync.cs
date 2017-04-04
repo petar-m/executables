@@ -4,9 +4,9 @@ namespace M.Executables
 {
     public interface IExecutorAsync
     {
-        Task ExecuteAsync<TExecutable>() where TExecutable : IExecutableVoid;
+        Task ExecuteAsync<TExecutableVoid>() where TExecutableVoid : IExecutableVoid;
 
-        Task ExecuteAsync<TExecutable, TInput>(TInput input) where TExecutable : IExecutableVoid<TInput>;
+        Task ExecuteAsync<TExecutableVoid, TInput>(TInput input) where TExecutableVoid : IExecutableVoid<TInput>;
 
         Task<TResult> ExecuteAsync<TExecutable, TResult>() where TExecutable : IExecutable<TResult>;
 
