@@ -1,4 +1,6 @@
-## Executables
+## Executables  
+
+[![NuGet version](https://badge.fury.io/nu/M.Executables.svg)](https://badge.fury.io/nu/M.Executables)
 
 A few interfaces for implementing a variation of the Command design pattern.  
 The Executables serve as entry point for the domain/object model. Tipically they will depend on repositories, services, etc. and will orchestrate the domain logic (use cases).    
@@ -61,20 +63,20 @@ Very simple executor:
  
 Setup:  
 
-			// initialize at startup
-
-			// "singleton"
-            var logger = new Logger();
-
-			// "transient" MyCommand
-            var provider = new DelegateInstanceProvider(
-                type => type == typeof(MyCommand) ? new MyCommand(logger) : throw new InvalidOperationException());
-		
-            var executor = new MyExecutor(provider);
-            ...
-
-            // usage
-            executor.Execute<MyCommand>();
+	// initialize at startup
+	
+	// "singleton"
+	var logger = new Logger();
+	
+	// "transient" MyCommand
+	var provider = new DelegateInstanceProvider(
+	    type => type == typeof(MyCommand) ? new MyCommand(logger) : throw new InvalidOperationException());
+			
+	var executor = new MyExecutor(provider);
+	...
+	
+	// usage
+	executor.Execute<MyCommand>();
 
 
 
