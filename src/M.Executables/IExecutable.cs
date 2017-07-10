@@ -1,4 +1,6 @@
-﻿namespace M.Executables
+﻿using System.Threading.Tasks;
+
+namespace M.Executables
 {
     public interface IExecutable<TResult>
     {
