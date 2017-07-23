@@ -28,8 +28,6 @@ Depending on the use cases/environment both interfaces can be implemented, or on
 
 - **(Breaking)** Now `IExecutor*` interfaces have additional generic constraint `class` on their methods for `IExecutable*` - there is no point for `struct` to implement interface and also plays nice with some IoC containers.
   
-- The only dependency now is `netstandard1.0` 
-
 
 ### IInstancePovider?  
 
