@@ -16,9 +16,18 @@ So if you want to separate commands form queries in different namespaces, having
 
 The intent if `IExecutor` is to provide middleware for execution, where the specific implementation can handle  scoping, transactions, error handling, logging, metrics, etc.  
 The executor is responsible for instantiation of executables, usually by delegating it to IoC container. 
-How an executable is executed (sync/async) is also a concern of the executor, therefore `IExecutorAsync`.  
+ ~~How an executable is executed (sync/async) is also a concern of the executor, therefore `IExecutorAsync`.~~  
    
 Depending on the use cases/environment both interfaces can be implemented, or only one, or even you may not need executor at all.  
+  
+### Changes in 2.x.x  
+
+- New `IExecutableAsync` and `IExecutableVoidAsync` interfaces - the choice of interface now allows the implementer to convey intent of how the executable should be executed.  
+
+- **(Breaking)** Now `IExecutorAsync` accepts the `*Async` versions of `IExecutable`, allowing the implementation to take advantage of async/await. It is easier now to avoid exposing asynchronous wrapper over synchronous API, which is considered bad practice.  
+
+- **(Breaking)** Now `IExecutor*` interfaces have additional generic constraint `class` on their methods for `IExecutable*` - there is no point for `struct` to implement interface and also plays nice with some IoC containers. 
+
 
 ### IInstancePovider?  
 
