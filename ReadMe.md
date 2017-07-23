@@ -1,6 +1,6 @@
 ## Executables  
 
-[![NuGet version](https://badge.fury.io/nu/M.Executables.svg)](https://badge.fury.io/nu/M.Executables)
+[![NuGet](https://img.shields.io/nuget/v/M.Executables.svg)](https://www.nuget.org/packages/M.Executables)
 
 A few interfaces for implementing a variation of the Command design pattern.  
 The Executables serve as entry point for the domain/object model. Tipically they will depend on repositories, services, etc. and will orchestrate the domain logic (use cases).    
@@ -26,7 +26,9 @@ Depending on the use cases/environment both interfaces can be implemented, or on
 
 - **(Breaking)** Now `IExecutorAsync` accepts the `*Async` versions of `IExecutable`, allowing the implementation to take advantage of async/await. It is easier now to avoid exposing asynchronous wrapper over synchronous API, which is considered bad practice.  
 
-- **(Breaking)** Now `IExecutor*` interfaces have additional generic constraint `class` on their methods for `IExecutable*` - there is no point for `struct` to implement interface and also plays nice with some IoC containers. 
+- **(Breaking)** Now `IExecutor*` interfaces have additional generic constraint `class` on their methods for `IExecutable*` - there is no point for `struct` to implement interface and also plays nice with some IoC containers.
+  
+- The only dependency now is `netstandard1.0` 
 
 
 ### IInstancePovider?  
