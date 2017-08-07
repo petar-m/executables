@@ -13,7 +13,23 @@
     <RepositoryUrl>https://github.com/petar-m/executables</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/petar-m/executables/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/petar-m/executables</PackageProjectUrl>
-    <Version>2.0.1</Version>
+    <Version>2.0.2</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.0|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard1.0\M.Executables.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net45|AnyCPU'">
+    <DocumentationFile>bin\Debug\net45\M.Executables.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard1.0|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.0\M.Executables.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net45|AnyCPU'">
+    <DocumentationFile>bin\Release\net45\M.Executables.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>
