@@ -32,7 +32,7 @@ namespace M.Executables
         Task<TResult> ExecuteAsync<TExecutableAsync, TResult>() where TExecutableAsync : class, IExecutableAsync<TResult>;
 
         /// <summary>
-        /// 
+        /// Executes an executable asynchronously with parameter and returns result.
         /// </summary>
         /// <typeparam name="TExecutableAsync">The type of executable to create and execute asynchronously.</typeparam>
         /// <typeparam name="TInput">The type of the parameter.</typeparam>
