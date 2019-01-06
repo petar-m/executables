@@ -5,7 +5,12 @@ VisualStudioVersion = 15.0.26228.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{485B66D2-DE43-468F-A403-2AC30CBD923F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M.Executables", "src\M.Executables\M.Executables.csproj", "{251FC2ED-E1F3-4836-870D-537A504F473F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M.Executables", "src\M.Executables\M.Executables.csproj", "{251FC2ED-E1F3-4836-870D-537A504F473F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{F8B85E5A-2B07-4915-A1F7-B52D19119028}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.md = ReadMe.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,5 +28,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{251FC2ED-E1F3-4836-870D-537A504F473F} = {485B66D2-DE43-468F-A403-2AC30CBD923F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B3D7501-04C2-46E5-81F9-0DD9BF924EFC}
 	EndGlobalSection
 EndGlobal
