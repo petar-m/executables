@@ -32,7 +32,7 @@ Depending on the use cases/environment both interfaces can be implemented, or on
 #### 2.1  
 
 - `IExecutors` - a single interface for convenience when an executor implements both  `IExecutor` and `IExecutorAsync`  
-- 
+- `IExecutionInterceptor` - interface for implementing interception of execution.
 
 ### IInstancePovider?  
 

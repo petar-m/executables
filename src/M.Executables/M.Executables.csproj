@@ -6,14 +6,14 @@
     <Company />
     <Description>Interfaces for implementing a variation of the Command design pattern.</Description>
     <PackageTags>command executor executables</PackageTags>
-    <PackageReleaseNotes>New IExecutableAsync and IExecutableVoidAsync interfaces, (Breaking) IExecutorAsync accepts the *Async versions of IExecutable,  (Breaking) Now IExecutor* interfaces have additional generic constraint class on their methods for IExecutable*.</PackageReleaseNotes>
-    <Copyright>Copyright (c) 2017 Petar Marinov</Copyright>
+    <PackageReleaseNotes>New IExecutionInterceptor and IExecutors interfaces.</PackageReleaseNotes>
+    <Copyright>Copyright (c) 2019 Petar Marinov</Copyright>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/petar-m/executables</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/petar-m/executables/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/petar-m/executables</PackageProjectUrl>
-    <Version>2.0.2</Version>
+    <Version>2.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.0|AnyCPU'">
