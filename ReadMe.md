@@ -4,6 +4,8 @@
 
 A few interfaces for implementing a variation of the Command design pattern.  
 The Executables serve as entry point for the domain/object model. Tipically they will depend on repositories, services, etc. and will orchestrate the domain logic (use cases).    
+Interceptors allow actions to be executed before and after Executable.  
+Interceptors may be common for all Executables or targeting specific ones. 
 
 ### Why IExecutable, IExecutableVoid?  
 
@@ -33,6 +35,22 @@ Depending on the use cases/environment both interfaces can be implemented, or on
 
 - `IExecutors` - a single interface for convenience when an executor implements both  `IExecutor` and `IExecutorAsync`  
 - `IExecutionInterceptor` - interface for implementing interception of execution.
+
+#### 2.2  
+
+New interface introduced in order to allow separation async and sync implementations.  
+New interfaces introduced to allow interceptors to target specific executables.  
+New interfaces introduced to allow implementation of interceptors to hint the executors of how to handle them. 
+
+
+- `IExecutionInterceptorAsync` - new interface for implementing async interception of execution. It complements `IExecutionInterceptor` for async execution.
+- `IExecutionInterceptorAsync<TExecutable, TInput, TResult>` and `IExecutionInterceptorAsync<TExecutable, TInput, TResult>` - new interfaces to allow implementation of interceptors targeting specific executables.
+- `IDiscardOtherInterceptors` - new interface to hint the executor that the inteceptor should be the only one executed.
+- `IDiscardNonGenericInterceptors` - new interface to hint the executor that non-generic interceptors should not be executed. 
+
+The idea behind non-generic interceptors is that they will be runned for all executables.  
+There may be cases when common logic will not work or should be different - the generic interceptors are intended to target concrete executable. The new marker interfaces should allow executors to handle scenarios like replacing non-generic interceptors with specific ones or having exclusive ones per executable.  
+  
 
 ### IInstancePovider?  
 

@@ -5,15 +5,15 @@
     <Authors>Petar Marinov</Authors>
     <Company />
     <Description>Interfaces for implementing a variation of the Command design pattern.</Description>
-    <PackageTags>command executor executables</PackageTags>
+    <PackageTags>command executor executables abstraction</PackageTags>
     <PackageReleaseNotes>New IExecutionInterceptor and IExecutors interfaces.</PackageReleaseNotes>
     <Copyright>Copyright (c) 2019 Petar Marinov</Copyright>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/petar-m/executables</RepositoryUrl>
-    <PackageLicenseUrl>https://github.com/petar-m/executables/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/petar-m/executables</PackageProjectUrl>
-    <Version>3.0.0</Version>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>2.2.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.0|AnyCPU'">
@@ -39,5 +39,5 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net45|AnyCPU'">
     <DocumentationFile>bin\Release\net45\M.Executables.xml</DocumentationFile>
   </PropertyGroup>
-
+  
 </Project>
