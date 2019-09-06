@@ -38,6 +38,7 @@ Depending on the use cases/environment both interfaces can be implemented, or on
 
 #### 2.2  
 
+Targeting .NET Standard 2.0 added.  
 New interface introduced in order to allow separation async and sync implementations.  
 New interfaces introduced to allow interceptors to target specific executables.  
 New interfaces introduced to allow implementation of interceptors to hint the executors of how to handle them. 
